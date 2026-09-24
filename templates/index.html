@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Stay Hotel</title>
+
+    <!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->       
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>Royal Stay</h2>
+            </div>
+<ul class="nav-links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('rooms') }}">Rooms</a></li>
+    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+    <li><a href="{{ url_for('services') }}">Services</a></li>
+    <li><a href="{{ url_for('booking') }}">Booking</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome To Royal Stay Hotel</h1>
+
+            <p>
+                Experience luxury, comfort, and unforgettable hospitality.
+            </p>
+
+            <a href='booking' class="btn">
+                Book Your Room
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+
+        <div class="container">
+
+            <div class="about-text">
+
+                <h2>About Our Hotel</h2>
+
+                <p>
+
+                    Royal Stay Hotel offers premium rooms, delicious food,
+                    world-class service, and a relaxing atmosphere.
+                    Our goal is to make every guest feel at home.
+
+                </p>
+
+                <a href="about" class="btn">
+                    Read More
+                </a>
+
+            </div>
+
+            <div class="about-image">
+
+               <img src="{{ url_for('static', filename='images/about our hotel.png') }}" alt="Room">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ROOMS ================= -->
+
+    <section class="rooms">
+
+        <h2>Featured Rooms</h2>
+
+        <div class="room-container">
+
+            <div class="room-card">
+
+<img src="{{ url_for('static', filename='images/Standard Room.png') }}" alt="Deluxe Room">                
+
+                <h3>Standard Room</h3>
+
+                <p>Comfortable room with all essential facilities.</p>
+
+                <h4>₹2,000 / Night</h4>
+
+            </div>
+
+            <div class="room-card">
+
+<img src="{{ url_for('static', filename='images/Deluxe Room.png') }}" alt="Deluxe Room">                
+                <h3>Deluxe Room</h3>
+
+                <p>Luxury room with premium interior and balcony.</p>
+
+                <h4>₹4,000 / Night</h4>
+
+            </div>
+
+            <div class="room-card">
+
+               <img src="{{ url_for('static', filename='images/Executive Suite.png') }}" alt="Room">
+
+                <h3>Executive Suite</h3>
+
+                <p>Best room with living area and beautiful city view.</p>
+
+                <h4>₹6,500 / Night</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-wifi"></i>
+
+                <h3>Free Wi-Fi</h3>
+
+            </div>
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-utensils"></i>
+
+                <h3>Restaurant</h3>
+
+            </div>
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <h3>Gym</h3>
+
+            </div>
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-person-swimming"></i>
+
+                <h3>Swimming Pool</h3>
+
+            </div>
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-car"></i>
+
+                <h3>Parking</h3>
+
+            </div>
+
+            <div class="service-box">
+
+                <i class="fa-solid fa-bell-concierge"></i>
+
+                <h3>24/7 Room Service</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TESTIMONIAL ================= -->
+
+    <section class="testimonial">
+
+        <h2>What Our Guests Say</h2>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-box">
+
+                <p>
+
+                    "Amazing experience! Staff was very polite and rooms
+                    were extremely clean."
+
+                </p>
+
+                <h4>- Rahul Sharma</h4>
+
+            </div>
+
+            <div class="testimonial-box">
+
+                <p>
+
+                    "One of the best hotels I have stayed in.
+                    Highly recommended."
+
+                </p>
+
+                <h4>- Priya Verma</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>Ready For Your Perfect Stay?</h2>
+
+        <a href="booking" class="btn">
+
+            Reserve Now
+
+        </a>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Royal Stay Hotel</h2>
+
+            <p>
+
+                Luxury • Comfort • Hospitality
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-twitter"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            </div>
+    <p>© 2026 Royal Stay Hotel | Created by Krishna Saxena | All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='java.js') }}"></script>
+
+</body>
+</html>
