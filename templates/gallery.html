@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Royal Stay Hotel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+    <div class="navbar">
+
+        <h2 class="logo">Royal Stay</h2>
+
+        <ul class="nav-links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('rooms') }}">Rooms</a></li>
+    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+    <li><a href="{{ url_for('services') }}">Services</a></li>
+    <li><a href="{{ url_for('booking') }}">Booking</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+
+    </div>
+
+</header>
+
+    <!-- Gallery -->
+
+    <section class="gallery">
+
+        <h1>Hotel Gallery</h1>
+
+       <img src="{{ url_for('static', filename='images/gallery1.png') }}" alt="Room">
+       <img src="{{ url_for('static', filename='images/gallery2.png') }}" alt="Deluxe Room"> <p>
+        <img src="{{ url_for('static', filename='images/gallery4.png') }}" alt="Hotel ">
+       <img src="{{ url_for('static', filename='images/gallery5.png') }}" alt="Hotel" ><P>
+       <img src="{{ url_for('static', filename='images/About us.png') }}" alt="Hotel" >
+       <img src="{{ url_for('static', filename='images/gallery3.png') }}" alt="Hotel" height="470px">
+       <img src="{{ url_for('static', filename='images/gallery6.png') }}" alt="Hotel" height="470px">
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+    <p>© 2026 Royal Stay Hotel | Created by Krishna Saxena</p>
+</footer>
+
+    <script src="{{ url_for('static', filename='java.js') }}"></script>
+</body>
+</html>-
