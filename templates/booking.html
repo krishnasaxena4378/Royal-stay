@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking | Royal Stay Hotel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h2 class="logo">Royal Stay</h2>
+
+           <ul class="nav-links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('rooms') }}">Rooms</a></li>
+    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+    <li><a href="{{ url_for('services') }}">Services</a></li>
+    <li><a href="{{ url_for('booking') }}">Booking</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+            <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+
+        </nav>
+
+    </header>
+
+    <!-- Booking Form -->
+
+    <section class="booking">
+
+        <h1>Book Your Room</h1>
+
+        {% if success %}
+            <h3 style="color: green; text-align: center; margin-bottom: 20px;">Room Booked Successfully!</h3>
+        {% endif %}
+
+        <form id="bookingForm" action="/booking" method="POST">
+
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+            <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+
+            <input type="date" id="checkin" name="checkin" required>
+
+            <input type="date" id="checkout" name="checkout" required>
+
+            <input type="number" id="guests" name="guests" placeholder="Number of Guests" min="1" max="10" required>
+
+            <select id="room" name="room" required>
+
+                <option value="">Select Room</option>
+
+                <option value="Standard Room">Standard Room</option>
+
+                <option value="Deluxe Room">Deluxe Room</option>
+
+                <option value="Suite Room">Suite Room</option>
+
+            </select>
+
+            <button type="submit" class="btn">
+                Book Now
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+
+  <footer>
+    <p>© 2026 Royal Stay Hotel | Created by Krishna Saxena</p>
+</footer>
+
+    <script src="{{ url_for('static', filename='java.js') }}"></script>
+
+</body>
+
+</html>
