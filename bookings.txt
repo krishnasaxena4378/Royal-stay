@@ -1,0 +1,16 @@
+Name: Krishna Saxena
+Email: krishnasaxena4378@gmail.com
+Phone: 08810493411
+Room: Standard Room
+Check-in: 2026-09-24
+Check-out: 2026-09-29
+Guests: 2
+----------------------------
+Name: sonu
+Email: sonu/@gmail.coom
+Phone: 8527419639
+Room: Standard Room
+Check-in: 2026-10-14
+Check-out: 2026-10-29
+Guests: 5
+----------------------------
