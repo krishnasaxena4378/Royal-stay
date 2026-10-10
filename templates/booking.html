@@ -51,7 +51,7 @@
             <h3 style="color: red; text-align: center; margin-bottom: 20px;">{{ error }}</h3>
         {% endif %}
 
-        <form id="bookingForm" action="{{ url_for('booking') }}" method="POST">
+        <form id="bookingForm" action="{{ url_for('booking') }}" method="POST" data-formspree="https://formspree.io/f/mjygrwpr">
 
             <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
 

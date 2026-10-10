@@ -5,15 +5,58 @@
 
 let contactForm = document.getElementById("contactForm");
 
+// Sends a form to Formspree (messages arrive in the owner's email)
+function sendToFormspree(form, url, successMessage) {
+    fetch(url, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+    }).then(function(response) {
+        if (response.ok) {
+            alert(successMessage);
+            form.reset();
+        } else {
+            alert("Sorry, something went wrong. Please try again.");
+        }
+    }).catch(function() {
+        alert("Network error. Please try again.");
+    });
+}
+
 if (contactForm) {
 
     contactForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        alert("Message Sent Successfully!");
+        sendToFormspree(contactForm, contactForm.action, "Message Sent Successfully!");
 
-        contactForm.reset();
+    });
+
+}
+
+// ============================
+// Booking Form (sent to Formspree)
+// ============================
+let bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+
+    bookingForm.addEventListener("submit", function(event) {
+
+        let checkin = document.getElementById("checkin").value;
+        let checkout = document.getElementById("checkout").value;
+
+        // Check-out must be after check-in
+        if (checkout <= checkin) {
+            event.preventDefault();
+            alert("Check-out date must be after check-in date.");
+            return;
+        }
+
+        event.preventDefault();
+
+        sendToFormspree(bookingForm, bookingForm.dataset.formspree, "Room Booked Successfully!");
 
     });
 
